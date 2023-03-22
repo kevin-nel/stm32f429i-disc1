@@ -1,0 +1,41 @@
+{
+  "configurations": [
+    {
+      "name": "cortex-debug",
+      "type": "cortex-debug",
+      "request": "launch",
+      "cwd": "${workspaceRoot}/build",
+      "executable": "${workspaceRoot}/build/${workspaceFolderBasename}.elf",
+      "servertype": "openocd",
+      "interface": "swd",
+      "device": "STM32F429",
+      "runToEntryPoint": "main",
+      "preRestartCommands": [
+        "target remote localhost:3333",
+        "add-symbol-file ${workspaceFolderBasename}.elf",
+        "enable breakpoint",
+        "monitor reset"
+      ],
+      "windows": {
+        "armToolchainPath": "C:/ProgramData/chocolatey/bin",
+        "configFiles": [
+          "C:/ProgramData/chocolatey/lib/openocd/tools/OpenOCD-20211118-0.11.0/share/openocd/scripts/board/stm32f429disc1.cfg"
+        ],
+        "searchDir": [
+          "C:/ProgramData/chocolatey/lib/openocd/tools/OpenOCD-20211118-0.11.0/share/openocd/scripts"
+        ],
+      },
+      "linux": {
+        "armToolchainPath": "/usr/bin",
+        "configFiles": [
+          "/usr/share/openocd/scripts/board/stm32f429disc1.cfg"
+        ],
+        "searchDir": [
+          "/usr/share/openocd/scripts"
+        ],
+      },
+      "svdFile": "${workspaceFolder}/STM32F429.svd",
+      "preLaunchTask": "build all"
+    }
+  ]
+}

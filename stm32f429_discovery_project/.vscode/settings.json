@@ -1,0 +1,32 @@
+{
+  "files.associations": {
+    "main.h": "c",
+    "stm32f4xx_hal.h": "c",
+    "stm32f429i_discovery_lcd.h": "c",
+    "stm32f429i_discovery.h": "c",
+    "stm32f4_discovery.h": "c",
+    "boot_img.h": "c",
+    "ili9341.h": "c",
+    "lcd.h": "c",
+    "fonts.h": "c",
+    "adc.h": "c",
+    "stm32f429i_discovery_sdram.h": "c",
+    "ltdc.h": "c",
+    "arm_math.h": "c",
+    "dac.h": "c",
+    "cmath": "c",
+    "complex": "c",
+    "dma2d.h": "c",
+    "crc.h": "c"
+  },
+  "cortex-debug.gdbPath.linux": "/usr/bin/gdb",
+  "cortex-debug.stutilPath.linux": "/usr/bin/st-util",
+  "cortex-debug.openocdPath.linux": "/usr/bin/openocd",
+  "cortex-debug.armToolchainPath.linux": "/usr/bin",
+  "cortex-debug.gdbPath.windows": "C:/ProgramData/chocolatey/bin/arm-none-eabi-gdb.exe",
+  "cortex-debug.stutilPath.windows": "C:/stlink-1.7.0-x86_64-w64-mingw32/bin/st-util",
+  "cortex-debug.openocdPath.windows": "C:/ProgramData/chocolatey/bin/openocd",
+  "cortex-debug.armToolchainPath.windows": "C:/ProgramData/chocolatey/bin",
+  "C_Cpp.formatting": "clangFormat",
+  "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 0}"
+}

@@ -1,0 +1,43 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build all",
+      "type": "shell",
+      "command": "make",
+      "args": [
+        "-j12"
+      ],
+      "group": "build"
+    },
+    {
+      "label": "build clean",
+      "type": "shell",
+      "windows": {
+        "command": "rm ${workspaceFolder}/Build",
+      },
+      "linux": {
+        "command": "make",
+        "args": [
+          "clean"
+        ],
+      },
+      "group": "build"
+    },
+    {
+      "label": "flash",
+      "type": "shell",
+      "command": "st-flash",
+      "args": [
+        "--reset",
+        "write",
+        "${workspaceFolder}/Build/${workspaceFolderBasename}.bin",
+        "0x8000000"
+      ],
+      "group": "build",
+      "dependsOn": [
+        "build all"
+      ]
+    }
+  ]
+}
